@@ -193,7 +193,7 @@
 
             loadItems(urlNextPage, function (data, items) {
                 // call the onLoadItems callback
-                var result = opts.onLoadItems.call(this, items),
+                var result = opts.onLoadItems.call(this, items, data),
                     curLastItem;
 
                 if (result !== false) {

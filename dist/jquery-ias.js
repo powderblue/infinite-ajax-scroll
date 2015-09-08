@@ -3,7 +3,7 @@
  * Version 1.0.1
  * https://github.com/webcreate/infinite-ajax-scroll
  *
- * Copyright (c) 2011-2013 Jeroen Fiege
+ * Copyright (c) 2011-2015 Jeroen Fiege
  * Licensed under MIT:
  * http://www.opensource.org/licenses/mit-license.php
  */
@@ -193,7 +193,7 @@
 
             loadItems(urlNextPage, function (data, items) {
                 // call the onLoadItems callback
-                var result = opts.onLoadItems.call(this, items),
+                var result = opts.onLoadItems.call(this, items, data),
                     curLastItem;
 
                 if (result !== false) {
