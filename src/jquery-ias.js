@@ -148,7 +148,7 @@
 
             el = $(opts.container).find(opts.item).last();
 
-            if (el.size() === 0) {
+            if (el.length === 0) {
                 return 0;
             }
 
@@ -323,7 +323,7 @@
         {
             var loader = $('.ias_loader');
 
-            if (loader.size() === 0) {
+            if (loader.length === 0) {
                 loader = $('<div class="ias_loader">' + opts.loader + '</div>');
                 loader.hide();
             }
@@ -369,7 +369,7 @@
         {
             var trigger = $('.ias_trigger');
 
-            if (trigger.size() === 0) {
+            if (trigger.length === 0) {
                 trigger = $('<div class="ias_trigger"><a href="#">' + opts.trigger + '</a></div>');
                 trigger.hide();
             }
@@ -444,7 +444,7 @@
          */
         function init()
         {
-            $(window).load(function () {
+            $(window).on('load', function () {
                 wndIsLoaded = true;
             });
         }
